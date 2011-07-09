@@ -1,0 +1,59 @@
+<!doctype html>
+<html xmlns:ng="http://angularjs.org">
+<head>
+	<title>ui:button widget</title>
+	<link type="text/css" rel="stylesheet" href="/css/smoothness/jquery-ui-1.8.14.custom.css"/>
+	<link type="text/css" rel="stylesheet" href="/css/tasks.css"/>
+	<script src="/js/lib/angular-0.9.17.min.js" ng:autobind type="text/javascript"></script>
+	<script src="/js/lib/jquery-1.6.1.min.js" type="text/javascript"></script>
+	<script src="/js/lib/underscore-min.js" type="text/javascript"></script>
+	<script src="/js/lib/jquery-ui-1.8.14.custom.min.js" type="text/javascript"></script>
+	<script src="/js/angular-widgets.js" type="text/javascript"></script>
+	<script src="/js/angular-formatters.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+	
+
+	ButtonTest.prototype = {
+		tokenId: 0,
+		show: function (val){
+			window.alert(val);
+		}
+
+		}
+
+
+	function ButtonTest(){
+		var self = this;
+		this.data = {list: ['USA', 'Canada', 'Mexico', 'Colombia']};
+		var v = angular.compile('<textarea>{{data.buttonDisabled}}</textarea>');
+	}
+
+	</script>
+</head>
+<body ng:controller="ButtonTest">
+<h1>ui:button widget</h1>
+
+<div>
+<ui:button ui:click="show('button 1!');">a button</ui:button>
+<ui:button ui:click="show('button 2!');">another button</ui:button>
+<ui:button ui:click="show('button 3!');" ui:icons="ui-icon-gear">icon button</ui:button>
+<ui:button ui:click="show('button 4!');" ui:icons="ui-icon-circle-check">another icon button</ui:button>
+<ui:button ui:click="show('button 5!');" ui:icons="ui-icon-plusthick"></ui:button>
+<ui:button ui:click="show('button 6!');" ui:icons="ui-icon-comment, ui-icon-triangle-1-s">two icons button</ui:button>
+<ui:button ui:click="show('button 7!');" ui:icons="ui-icon-mailclosed, ui-icon-triangle-1-s"></ui:button>
+</div>
+<hr style="clear:both;"/>
+disabled button: <input type="checkbox" name="data.buttonDisabled"/><ui:button ui:click="show('button 22!');" ui:disabled="data.buttonDisabled" ui:icons="ui-icon-circle-check">another icon button</ui:button>
+<hr style="clear:both;"/>
+
+button list:
+<div ng:repeat="i in data.list">
+<ui:button ui:click="show('pin '+i);" ui:icons="ui-icon-pin-s">{{i}}</ui:button>
+</div>
+
+<hr style="clear:both;"/>
+<div class="json" ng:bind="data" ng:format="json"></div>
+
+</body>
+</html>

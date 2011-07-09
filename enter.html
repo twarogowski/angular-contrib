@@ -1,0 +1,60 @@
+<!doctype html>
+<html xmlns:ng="http://angularjs.org">
+<head>
+	<title>ui:enter directive</title>
+	<link type="text/css" rel="stylesheet" href="/css/smoothness/jquery-ui-1.8.14.custom.css"/>
+	<link type="text/css" rel="stylesheet" href="/css/tasks.css"/>
+	<script src="/js/lib/angular-0.9.17.min.js" ng:autobind type="text/javascript"></script>
+	<script src="/js/lib/jquery-1.6.1.min.js" type="text/javascript"></script>
+	<script src="/js/lib/underscore-min.js" type="text/javascript"></script>
+	<script src="/js/angular-widgets.js" type="text/javascript"></script>
+	<script src="/js/angular-formatters.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	$(function(){
+	
+		$('#tokens').click(function(){
+			$('#add-token').focus();
+		});	
+
+	});
+	
+
+	EnterTest.prototype = {
+		tokenId: 0,
+		show: function (val){
+			window.alert(val);
+		},
+		add: function (el, name){
+			angular.Array.add(this.data.list, {id: this.data.tokenId++, name: name});
+			$(el).val('');
+		}
+	};
+	
+
+
+
+function EnterTest(){
+	var self = this;
+	this.data = {alert1: '', list : [], tokenId: 0};
+	
+}
+
+	</script>
+</head>
+<body ng:controller="EnterTest">
+<h1>ui:enter directive</h1>
+
+alert1: <input ui:enter="show(data.alert1);" name="data.alert1"/>
+
+list:
+<div class="tokens" id="tokens">
+<span ng:repeat="i in data.list" class="token">{{i.name}} <a style="text-decoration:none" ng:click="data.list.$remove(i)">x</a></span>
+<input id="add-token" style="float:left; border:none;" ui:enter="add(this, data.newName);" name="data.newName"/>
+</div>
+
+
+<hr style="clear:both;"/>
+<div class="json" ng:bind="data" ng:format="json"></div>
+
+</body>
+</html>
