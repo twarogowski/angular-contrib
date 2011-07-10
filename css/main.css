@@ -162,47 +162,47 @@ div#form{
 {
 	width:14px;
 	height:14px;
-	background: url(/images/stars.png) -90px 0px no-repeat;
+	background: url(../images/stars.png) -90px 0px no-repeat;
 }
 
 .emblem-star
 {
-	background: url(/images/stars.png) -30px 0px no-repeat;
+	background: url(../images/stars.png) -30px 0px no-repeat;
 }
 
 .emblem-star-blue
 {
-	background: url(/images/stars.png) -60px 0px no-repeat;
+	background: url(../images/stars.png) -60px 0px no-repeat;
 }
 
 .emblem-star-red
 {
-	background: url(/images/stars.png) -0px 0px no-repeat;
+	background: url(../images/stars.png) -0px 0px no-repeat;
 }
 
 .emblem-star-green
 {
-	background: url(/images/stars.png) -45px 0px no-repeat;
+	background: url(../images/stars.png) -45px 0px no-repeat;
 }
 
 .emblem-excl-yellow
 {
-	background: url(/images/stars.png) -30px -15px no-repeat;
+	background: url(../images/stars.png) -30px -15px no-repeat;
 }
 
 .emblem-excl
 {
-	background: url(/images/stars.png) 0px -15px no-repeat;
+	background: url(../images/stars.png) 0px -15px no-repeat;
 }
 
 .emblem-ok
 {
-	background: url(/images/stars.png) -45px -15px no-repeat;
+	background: url(../images/stars.png) -45px -15px no-repeat;
 }
 
 .emblem-info
 {
-	background: url(/images/stars.png) -60px -15px no-repeat;
+	background: url(../images/stars.png) -60px -15px no-repeat;
 }
 
 .tokens
