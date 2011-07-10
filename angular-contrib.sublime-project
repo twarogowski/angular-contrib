@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"a",
+				"align"
+			],
+			[
+				"i",
+				"isString"
+			],
+			[
+				"dis",
+				"display: display: block"
+			],
+			[
+				"s",
+				"size"
+			],
+			[
+				"back",
+				"background: background-color: hex"
+			],
+			[
 				"parse",
 				"parseExpr"
 			],
@@ -14,10 +34,6 @@
 			[
 				"sty",
 				"style"
-			],
-			[
-				"back",
-				"background: background-color: hex"
 			],
 			[
 				"bor",
@@ -72,10 +88,6 @@
 				"margin: margin-right: length"
 			],
 			[
-				"a",
-				"absolute  (value)"
-			],
-			[
 				"posi",
 				"position: position: type"
 			],
@@ -114,10 +126,6 @@
 			[
 				"padd",
 				"padding: padding: all"
-			],
-			[
-				"dis",
-				"display: display: common-types"
 			],
 			[
 				"font",
@@ -200,34 +208,18 @@
 	"buffers":
 	[
 		{
-			"file": "/opt/node/apps/angular-contrib/emblem.html",
+			"file": "/opt/node/apps/angular-contrib/index.html",
 			"settings":
 			{
-				"buffer_size": 2705,
+				"buffer_size": 408,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/opt/node/apps/angular-contrib/json/employees.json",
+			"file": "/opt/node/apps/angular-contrib/docs/widgets.html",
 			"settings":
 			{
-				"buffer_size": 467,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/opt/node/apps/angular-contrib/autocomplete.html",
-			"settings":
-			{
-				"buffer_size": 3939,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/opt/node/apps/angular-contrib/selectable.html",
-			"settings":
-			{
-				"buffer_size": 3997,
+				"buffer_size": 932,
 				"line_ending": "Unix"
 			}
 		}
@@ -235,7 +227,7 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392,
+		"height": 192,
 		"selected_items":
 		[
 			[
@@ -263,7 +255,7 @@
 				"Snippet: Lorem ipsum"
 			]
 		],
-		"width": 620
+		"width": 467
 	},
 	"distraction_free":
 	{
@@ -275,15 +267,23 @@
 	},
 	"file_history":
 	[
+		"/opt/node/apps/angular-contrib/docs/widgets.html",
+		"/opt/node/apps/angular-contrib/css/main.css",
+		"/opt/node/apps/angular-contrib/index.html",
+		"/opt/node/apps/twarogowski.github.com/css/main.css",
+		"/opt/node/apps/angular-contrib/css/tasks.css",
+		"/opt/node/apps/angular-contrib/json/employees.json",
+		"/opt/node/apps/angular-contrib/autocomplete.html",
+		"/opt/node/apps/angular-contrib/selectable.html",
+		"/opt/node/apps/twarogowski.github.com/index.html",
+		"/opt/node/apps/angular-contrib/js/angular-services.js",
+		"/opt/node/apps/angular-contrib/emblem.html",
 		"/opt/node/apps/angular-contrib/button.html",
 		"/opt/node/apps/angular-contrib/enter.html",
-		"/opt/node/apps/angular-contrib/index.html",
 		"/opt/node/apps/angular-contrib/map.html",
 		"/opt/node/apps/angular-contrib/progress.html",
-		"/opt/node/apps/angular-contrib/selectable.html",
 		"/opt/node/apps/angular-contrib/toggle.html",
 		"/opt/node/apps/angular-contrib/datepicker.html",
-		"/opt/node/apps/angular-contrib/autocomplete.html",
 		"/etc/nginx/nginx.conf",
 		"/opt/node/apps/Invoices/public/javascripts/task-controller.js",
 		"/opt/node/apps/Invoices/public/javascripts/angular-services.js",
@@ -382,29 +382,27 @@
 	"groups":
 	[
 		{
-			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/opt/node/apps/angular-contrib/emblem.html",
+					"file": "/opt/node/apps/angular-contrib/index.html",
 					"settings":
 					{
-						"buffer_size": 2705,
+						"buffer_size": 408,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								456,
-								456
+								231,
+								231
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0,
 						"translation.y": 0,
@@ -414,80 +412,26 @@
 				},
 				{
 					"buffer": 1,
-					"file": "/opt/node/apps/angular-contrib/json/employees.json",
+					"file": "/opt/node/apps/angular-contrib/docs/widgets.html",
 					"settings":
 					{
-						"buffer_size": 467,
+						"buffer_size": 932,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								466,
-								466
+								737,
+								737
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0,
 						"translation.y": 0,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/opt/node/apps/angular-contrib/autocomplete.html",
-					"settings":
-					{
-						"buffer_size": 3939,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1617,
-								1617
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0,
-						"translation.y": 255,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/opt/node/apps/angular-contrib/selectable.html",
-					"settings":
-					{
-						"buffer_size": 3997,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								861,
-								861
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0,
-						"translation.y": 765,
 						"zoom_level": 1
 					},
 					"type": "text"
@@ -537,7 +481,7 @@
 	},
 	"show_minimap": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 265,
 	"status_bar_visible": true
 }
