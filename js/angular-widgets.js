@@ -65,6 +65,39 @@ angular.directive('ui:selectable-container', function(expr, el) {
 });
 
 
+
+//ui:masked
+//a directive for a text element to obtain masked-field editing capabilities
+angular.widget('ui:masked', function(el) {
+	var compiler = this;
+	var defaults = {};
+	var valExpr = widgetUtils.parseAttrExpr(el, 'ui:value');
+	var maskExpr = widgetUtils.parseAttrExpr(el, 'ui:mask');		
+	var options = widgetUtils.getOptions(el, defaults);
+	return function(el) {
+		var currentScope = this;
+		var d1 = $('<input type="text"/>');
+		$(el).append(d1);
+		$(d1).mask(maskExpr.expression);
+		$(d1).keypress(function(){
+			var um = $(d1).mask();
+			widgetUtils.setValue(currentScope, valExpr, um)
+		});
+		$(d1).keydown(function(){
+			var um = $(d1).mask();
+			widgetUtils.setValue(currentScope, valExpr, um)
+		});
+		currentScope.$watch(valExpr.expression, function(val){
+				var d = widgetUtils.formatValue(val, valExpr, currentScope);
+				//$(d1).unmask();
+			}, null, true);
+	};
+});
+
+
+
+
+
 // ui:button widget
 // simple jQuery styled button
 angular.widget('ui:button', function(el) {

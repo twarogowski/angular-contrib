@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"ve",
+				"vertical"
+			],
+			[
+				"ali",
+				"align"
+			],
+			[
+				"ver",
+				"vertical: vertical-align: type"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"bot",
+				"bottom"
+			],
+			[
+				"mar",
+				"margin: margin: all"
+			],
+			[
 				"a",
 				"align"
 			],
@@ -80,10 +104,6 @@
 				"overflow: overflow: type"
 			],
 			[
-				"he",
-				"height"
-			],
-			[
 				"margin",
 				"margin: margin-right: length"
 			],
@@ -118,10 +138,6 @@
 			[
 				"at",
 				"attrName"
-			],
-			[
-				"mar",
-				"margin: margin: all"
 			],
 			[
 				"padd",
@@ -208,18 +224,26 @@
 	"buffers":
 	[
 		{
-			"file": "/opt/node/apps/angular-contrib/index.html",
+			"file": "/opt/node/apps/angular-contrib/js/angular-widgets.js",
 			"settings":
 			{
-				"buffer_size": 408,
+				"buffer_size": 18561,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/opt/node/apps/angular-contrib/docs/widgets.html",
+			"file": "/opt/node/apps/angular-contrib/docs/widgets/masked.html",
 			"settings":
 			{
-				"buffer_size": 932,
+				"buffer_size": 1964,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/opt/node/apps/angular-contrib/js/lib/jquery.maskedinput-1.3.js",
+			"settings":
+			{
+				"buffer_size": 6823,
 				"line_ending": "Unix"
 			}
 		}
@@ -267,16 +291,28 @@
 	},
 	"file_history":
 	[
-		"/opt/node/apps/angular-contrib/docs/widgets.html",
+		"/opt/node/apps/angular-contrib/docs/widgets/progress.html",
+		"/opt/node/apps/angular-contrib/docs/widgets/map.html",
+		"/opt/node/apps/angular-contrib/docs/widgets/masked.html",
 		"/opt/node/apps/angular-contrib/css/main.css",
+		"/opt/node/apps/angular-contrib/docs/widgets.html",
 		"/opt/node/apps/angular-contrib/index.html",
+		"/opt/node/apps/angular-contrib/docs/widgets/button.html",
+		"/opt/node/apps/angular-contrib/js/angular-formatters.js",
+		"/opt/node/apps/angular-contrib/js/angular-services.js",
+		"/opt/node/apps/angular-contrib/js/angular-widgets.js",
+		"/opt/node/apps/angular-contrib/docs/widgets/autocomplete.html",
+		"/opt/node/apps/angular-contrib/docs/widgets/datepicker.html",
+		"/opt/node/apps/angular-contrib/docs/widgets/emblem.html",
+		"/opt/node/apps/angular-contrib/docs/widgets/enter.html",
+		"/opt/node/apps/angular-contrib/docs/widgets/selectable.html",
+		"/opt/node/apps/angular-contrib/docs/widgets/toggle.html",
 		"/opt/node/apps/twarogowski.github.com/css/main.css",
 		"/opt/node/apps/angular-contrib/css/tasks.css",
 		"/opt/node/apps/angular-contrib/json/employees.json",
 		"/opt/node/apps/angular-contrib/autocomplete.html",
 		"/opt/node/apps/angular-contrib/selectable.html",
 		"/opt/node/apps/twarogowski.github.com/index.html",
-		"/opt/node/apps/angular-contrib/js/angular-services.js",
 		"/opt/node/apps/angular-contrib/emblem.html",
 		"/opt/node/apps/angular-contrib/button.html",
 		"/opt/node/apps/angular-contrib/enter.html",
@@ -382,27 +418,56 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/opt/node/apps/angular-contrib/index.html",
+					"file": "/opt/node/apps/angular-contrib/js/angular-widgets.js",
 					"settings":
 					{
-						"buffer_size": 408,
+						"buffer_size": 18561,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								231,
-								231
+								3144,
+								3144
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0,
+						"translation.y": 889,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/opt/node/apps/angular-contrib/docs/widgets/masked.html",
+					"settings":
+					{
+						"buffer_size": 1964,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1264,
+								1264
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0,
 						"translation.y": 0,
@@ -411,27 +476,28 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "/opt/node/apps/angular-contrib/docs/widgets.html",
+					"buffer": 2,
+					"file": "/opt/node/apps/angular-contrib/js/lib/jquery.maskedinput-1.3.js",
 					"settings":
 					{
-						"buffer_size": 932,
+						"buffer_size": 6823,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								737,
-								737
+								1534,
+								1534
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0,
-						"translation.y": 0,
+						"translation.y": 2349,
 						"zoom_level": 1
 					},
 					"type": "text"
