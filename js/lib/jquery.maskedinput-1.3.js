@@ -48,6 +48,9 @@
 			}
 		},
 		unmask: function() { return this.trigger("unmask"); },
+		isMaskValid: function(){
+			return $(this).data('mask-isvalid');
+		},
 		mask: function(mask, settings) {
 			if (!mask && this.length > 0) {
 				var input = $(this[0]);
@@ -137,6 +140,7 @@
 						}
 						clearBuffer(begin, end);
 						shiftL(begin,end-1);
+						isValid();						//twarogowski
 
 						return false;
 					} else if (k == 27) {//escape
@@ -155,6 +159,7 @@
 						if(pos.end-pos.begin!=0){
 							clearBuffer(pos.begin, pos.end);
 							shiftL(pos.begin, pos.end-1);
+							isValid();						//twarogowski
 						}
 
 						var p = seekNext(pos.begin - 1);
@@ -166,6 +171,7 @@
 								writeBuffer();
 								var next = seekNext(p);
 								input.caret(next);
+								isValid();						//twarogowski
 								if (settings.completed && next >= len)
 									settings.completed.call(input);
 							}
@@ -182,6 +188,32 @@
 				};
 
 				function writeBuffer() { return input.val(buffer.join('')).val(); };
+
+				function isValid(){
+					var test = input.val();
+					var lastMatch = -1;
+					for (var i = 0, pos = 0; i < len; i++) {
+						if (tests[i]) {
+							buffer[i] = settings.placeholder;
+							while (pos++ < test.length) {
+								var c = test.charAt(pos - 1);
+								if (tests[i].test(c)) {
+									buffer[i] = c;
+									lastMatch = i;
+									break;
+								}
+							}
+							if (pos > test.length)
+								break;
+						} else if (buffer[i] == test.charAt(pos) && i!=partialPosition) {
+							pos++;
+							lastMatch = i;
+						}
+					}
+					var valid = (lastMatch + 1 >= partialPosition);
+					input.data('mask-isvalid',valid);
+					return valid;
+				}
 
 				function checkVal(allow) {
 					//try to place characters where they belong

@@ -291,6 +291,9 @@
 	},
 	"file_history":
 	[
+		"/home/lukasz/Switch_Scrpts_/CountI.xml",
+		"/home/lukasz/Switch_Scrpts_/CountI.js",
+		"/home/lukasz/Switch_Scrpts_/CountI.sfixture",
 		"/opt/node/apps/angular-contrib/docs/widgets/progress.html",
 		"/opt/node/apps/angular-contrib/docs/widgets/map.html",
 		"/opt/node/apps/angular-contrib/docs/widgets/masked.html",
@@ -487,8 +490,8 @@
 						"selection":
 						[
 							[
-								1534,
-								1534
+								4047,
+								4047
 							]
 						],
 						"settings":

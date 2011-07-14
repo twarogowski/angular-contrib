@@ -70,26 +70,37 @@ angular.directive('ui:selectable-container', function(expr, el) {
 //a directive for a text element to obtain masked-field editing capabilities
 angular.widget('ui:masked', function(el) {
 	var compiler = this;
-	var defaults = {};
+	var defaults = {allowInvalid: false};
 	var valExpr = widgetUtils.parseAttrExpr(el, 'ui:value');
-	var maskExpr = widgetUtils.parseAttrExpr(el, 'ui:mask');		
+	var maskExpr = widgetUtils.parseAttrExpr(el, 'ui:mask');
+	var isvalidExpr = widgetUtils.parseAttrExpr(el, 'ui:isvalid');		
 	var options = widgetUtils.getOptions(el, defaults);
 	return function(el) {
 		var currentScope = this;
 		var d1 = $('<input type="text"/>');
 		$(el).append(d1);
 		$(d1).mask(maskExpr.expression);
-		$(d1).keypress(function(){
-			var um = $(d1).mask();
-			widgetUtils.setValue(currentScope, valExpr, um)
-		});
-		$(d1).keydown(function(){
-			var um = $(d1).mask();
-			widgetUtils.setValue(currentScope, valExpr, um)
-		});
+
+		function handleEvent(){
+			var um = d1.mask();
+			var valid = d1.isMaskValid();
+			if(!options.allowInvalid && !valid)
+				um='';
+			if(valid)
+				d1.addClass('mask-valid').removeClass('mask-invalid');
+			else
+				d1.addClass('mask-invalid').removeClass('mask-valid');	
+			if(isvalidExpr)
+				widgetUtils.setValue(currentScope, isvalidExpr, valid);
+			widgetUtils.setValue(currentScope, valExpr, um);
+		}
+
+		d1.keypress(handleEvent).keydown(handleEvent);
 		currentScope.$watch(valExpr.expression, function(val){
 				var d = widgetUtils.formatValue(val, valExpr, currentScope);
-				//$(d1).unmask();
+				var old = d1.mask();
+				if(old!=d)
+					d1.val(d).trigger('blur.mask');
 			}, null, true);
 	};
 });

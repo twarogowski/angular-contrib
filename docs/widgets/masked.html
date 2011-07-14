@@ -14,9 +14,7 @@
 	<script src="../../js/angular-widgets.js" type="text/javascript"></script>
 	<script src="../../js/angular-formatters.js" type="text/javascript"></script>
 	<script type="text/javascript">
-	$(function(){
-			$('#m1, #m3').mask('999 999 99-99');
-	});
+
 
 	MaskedTest.prototype = {
 		
@@ -32,17 +30,37 @@ function MaskedTest(){
 }
 
 	</script>
+<style type="text/css">
+	.mask-valid{
+		background-color: #A6FFB8;
+	}	
+
+	.mask-invalid{
+		background-color: #FFB0B0;
+	}
+
+
+</style>
 </head>
 <body ng:controller="MaskedTest">
 <h1>ui:masked widget</h1>
 
-<div style="clear:both;">msk1: <ui:masked ui:value="data.msk1" ui:mask="9999"></ui:masked><input style="width:140px;" type="text" name="data.msk1"/>
+<div style="clear:both;">msk1 [9999]: <ui:masked ui:value="data.msk1" ui:isvalid="msk1_isvalid" ui:mask="9999"></ui:masked><input style="width:140px;" type="text" name="data.msk1"/><input type="checkbox" disabled name="msk1_isvalid"/>
 </div>
 
-<div style="clear:both;">msk2: <ui:masked ui:value="data.msk2" ui:mask="999-999-999"></ui:masked><input style="width:140px;" type="text" name="data.msk2"/>
+<div style="clear:both;">msk1a [9999] - allow invalid: <ui:masked ui:value="data.msk1a" ui:options="{allowInvalid:true}" ui:isvalid="msk1a_isvalid" ui:mask="9999"></ui:masked><input style="width:140px;" type="text" name="data.msk1a"/><input type="checkbox" disabled name="msk1a_isvalid"/>
 </div>
 
-<div style="clear:both;">msk3: <ui:masked ui:value="data.msk3" ui:mask="(99) 999-999-999 / 999"></ui:masked><input style="width:140px;" type="text" name="data.msk3"/>
+<div style="clear:both;">msk2 [999-999-999]: <ui:masked ui:value="data.msk2" ui:isvalid="msk2_isvalid" ui:mask="999-999-999"></ui:masked><input style="width:140px;" type="text" name="data.msk2"/><input type="checkbox" disabled name="msk2_isvalid"/>
+</div>
+
+<div style="clear:both;">msk3 [(99) 999-999-999? / 999]: <ui:masked ui:value="data.msk3" ui:isvalid="msk3_isvalid" ui:mask="(99) 999-999-999? / 999"></ui:masked><input style="width:140px;" type="text" name="data.msk3"/><input type="checkbox" disabled name="msk3_isvalid"/>
+</div>
+
+<div style="clear:both;">msk4 [aaaa]: <ui:masked ui:value="data.msk4" ui:isvalid="msk4_isvalid" ui:mask="aaaa"></ui:masked><input style="width:140px;" type="text" name="data.msk4"/><input type="checkbox" disabled name="msk4_isvalid"/>
+</div>
+
+<div style="clear:both;">msk5 [aaa999999]: <ui:masked ui:value="data.msk5" ui:isvalid="msk5_isvalid" ui:mask="aaa999999"></ui:masked><input style="width:140px;" type="text" name="data.msk5"/><input type="checkbox" disabled name="msk5_isvalid"/>
 </div>
 
 
